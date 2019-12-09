@@ -1,0 +1,82 @@
+{% extends "base.html"%} 
+
+{% block content %}
+<div class="container">
+<h3>SEARCH RESULT</h3>
+<hr>
+<div class='output'>
+{% for i in match1 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+{% for i in match2 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+{% for i in match3 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+{% for i in match4 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+{% for i in match5 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+{% for i in match6 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+{% for i in match7 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+{% for i in match8 %}
+Name={{i.name}}<br>
+Stock={{i.stock}}<br>
+Price={{i.price}}<br>
+Availavility={% if i.availabel == True %}Available
+ {% else %}NotAvailable
+ {% endif %} 
+{% endfor %}<br>
+
+ </div>
+ </div>
+{% endblock %}

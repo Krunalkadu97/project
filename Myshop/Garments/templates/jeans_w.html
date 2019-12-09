@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="container">
+	<h3>All Shorts Shirt</h3>
+	<hr>
+	<table width=100% border=1>
+	{% for i in lst6 %}
+      <td width=50% >
+	<h2>{{i.name}}</h2>
+	<img src="{{i.photo.url}}" width=200 height=250 alt="Shirt image"/>
+      </td>
+
+     <td width=50%>
+     <h2>Product Details:</h2>
+	Name={{i.name}}<br>
+	Stock={{i.stock}}<br>
+	Price={{i.price}}<br>
+	Availavility={% if i.availabel == True %}Yes {% else %}No {% endif %} <br>
+	Created={{i.created}}<br>
+	Updated={{i.updated}}<br>
+	Description={{i.desc}}<br>
+	<button type="button" class="btn btn-outline-secondary"><i class="fas fa-caret-square-right"></i> Buy</button>
+	<button type="button" class="btn btn-outline-warning" href="/wishlist"><i class="far fa-heart"></i></button>
+  	<button type="button" class="btn btn-outline-danger"><i class="fas fa-shopping-cart"></i> Add-catr</button>
+</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}
