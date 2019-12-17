@@ -1,0 +1,62 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+<!--start intro-->
+<section class="site-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 site-title">
+                        <h3 class="title-text">Hey</h3>
+                        <h1 class="title-text text-uppercase">I am Krunal</h1>
+                        <h4 class="title-text text-uppercase">Jr. Pthon Full Stack Developer</h4>
+                        <div class="site-buttons">
+                            <div class="d-flex flex-row flex-wrap">
+                                <button type="button" class="btn button primary-button mr-4 text-uppercase">hire
+                                    me</button>
+                                <button type="button" class="btn button secondary-button text-uppercase">Get cv</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 banner-image">
+                        <img src="media/img/banner/banner-image.png" alt="banner-img" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--end intro-->
+
+<section class="about-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image">
+                            <img src="media/img/about-us.png" alt="About us" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 about-title">
+                    
+	         {% for i in lst %}
+		
+		
+			<h2 class="text-uppercase pt-5">
+                            
+			<label>Introduction</Label><br>
+			{{i.about_me}}
+			
+                 	                  		</h2>
+			<div class="paragraph py-4 w-75">
+                            <p class="para">
+                               {{i.intro}}
+                            </p>
+                        </div>
+
+	         {% endfor %}
+	         
+	      
+                        
+                        <button type="button" class="btn button primary-button text-uppercase">Download cv</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
